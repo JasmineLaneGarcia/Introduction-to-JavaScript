@@ -121,7 +121,7 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(age, weight){
+function hungryDog(weight, age){
     /*add your code here*/
     if(age >= 1){
       if(weight <= 5){
@@ -138,19 +138,19 @@ function hungryDog(age, weight){
       }
     }
     else{
-      if(age >= .166666 && age < .33333){
+      if(age >= (2/12) && age < (4/12)){
         return weight * .1;
       }
-      else if(age >= .33333 && age < .58333){
+      else if(age >= (4/12) && age < (7/12)){
         return weight *.05;
       }
-      else if(age >= .58333 && age < 1){
+      else if(age >= (7/12) && age < 1){
         return weight * .04;
       }
     }
   }
 
-  console.log(hungryDog(1, 15));
+  console.log(hungryDog(15, 1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -230,7 +230,7 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-    return cm * 0.0328084;
+    return cm / 30.48;
   }
  
 console.log(feet(10));
@@ -247,13 +247,10 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(num){
         /*add your code here*/
-        while (num >= 1) {
-          console.log(+ num + " bottles of soda on the wall, " + num + " bottles of soda, take one down pass it around " + (num - 1) + " bottles of soda on the wall")
-          num--;
-        }
+        return ( num + " bottles of soda on the wall, " + num + " bottles of soda, take one down pass it around " + (num - 1) + " bottles of soda on the wall");
   }
 
-annoyingSong(5);
+console.log(annoyingSong(5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -273,15 +270,15 @@ Using the grade function below do the following:
 function grade(score){
   /*Your Code here */
     if(score >= 90){
-      return "A";
-    }else if(score <= 89.99 && score >= 80){
-      return "B";
-    }else if(score <= 79.99 && score >= 70){
-      return "C";
-    }else if(score <= 69.99 && score >= 60){
-      return "D";
-    }else if(score <= 59.99){
-      return "F"
+      return "you got an A";
+    }else if(score <= 90 && score >= 80){
+      return "you got a B";
+    }else if(score < 80 && score >= 70){
+      return "you got a C";
+    }else if(score < 70 && score >= 60){
+      return "you got a D";
+    }else if(score < 60){
+      return "you got an F"
     }
   }
   
